@@ -1,0 +1,118 @@
+﻿<Window x:Class="WPFAplikacija.TeamInformation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFAplikacija"
+        mc:Ignorable="d"
+        Title="TeamInformation" Height="243.6" Width="300">
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <EventTrigger.Actions>
+                <BeginStoryboard>
+                    <Storyboard BeginTime="0" Duration="00:00:01">
+                        <DoubleAnimation
+							AutoReverse="False"
+							BeginTime="0:0:0"
+							RepeatBehavior="1x"
+							Storyboard.TargetProperty="(Window.Left)"
+							From="0"
+							To="500"
+							Duration="00:00:01" />
+                    </Storyboard>
+                </BeginStoryboard>
+            </EventTrigger.Actions>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <StackPanel Margin="0,0,-0.4,-0.4" Background="#11998e">
+    
+        <!--  naziv  -->
+        <StackPanel Orientation="Horizontal">
+            <Label
+                x:Name="lbName"
+				Content="Naziv"
+				FontSize="12"
+                Foreground="White"
+				FontWeight="Bold" />
+            <Label x:Name="lblRepresentationName" Foreground="White"  Content="Croatia" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal">
+            <Label
+                x:Name="lbCode"
+				Content="FIFA Kod"
+				FontSize="12"
+                Foreground="White"
+				FontWeight="Bold" />
+            <Label x:Name="lblRepresentationCode" Foreground="White" Content="CRO" />
+        </StackPanel>
+
+        <!--  broj odigranih utakmica  -->
+        <StackPanel Orientation="Horizontal">
+            <Label
+                x:Name="lbGames"
+				Content="Broj odigranih utakmica"
+				FontSize="12"
+                Foreground="White"
+				FontWeight="Bold" />
+            <Label x:Name="lblGamesPlayed" Foreground="White" Content="10" />
+        </StackPanel>
+
+        <!--  broj pobjeda  -->
+        <StackPanel Orientation="Horizontal">
+            <Label
+                x:Name="lbWins"
+				Content="Broj pobjeda"
+				FontSize="12"
+                Foreground="White"
+				FontWeight="Bold" />
+            <Label x:Name="lblGamesWon" Foreground="White" Content="5" />
+        </StackPanel>
+
+        <!--  broj poraza  -->
+        <StackPanel Orientation="Horizontal">
+            <Label
+                x:Name="lbLost"
+				Content="Broj poraza"
+				FontSize="12"
+                Foreground="White"
+				FontWeight="Bold" />
+            <Label x:Name="lblGamesLost" Foreground="White" Content="3" />
+        </StackPanel>
+
+        <!--  broj zabijenih golova  -->
+        <StackPanel Orientation="Horizontal">
+            <Label
+                x:Name="lbGoals"
+				Content="Broj zabijenih golova"
+				FontSize="12"
+                Foreground="White"
+				FontWeight="Bold" />
+
+            <Label x:Name="lblGoalsScored" Foreground="White" Content="10" />
+        </StackPanel>
+
+        <!--  broj primljenih golova  -->
+        <StackPanel Orientation="Horizontal">
+            <Label
+                x:Name="lbRecieved"
+				Content="Broj primljenih golova"
+				FontSize="12"
+                Foreground="White"
+				FontWeight="Bold" />
+            <Label x:Name="lblGoalsReceived" Foreground="White" Content="10" />
+        </StackPanel>
+
+        <!--  gol razlika  -->
+            <StackPanel Orientation="Horizontal">
+                <Label
+                x:Name="lbDiff"
+				Content="Gol Razlika"
+				FontSize="12"
+                Foreground="White"
+				FontWeight="Bold" />
+            <Label x:Name="lblGoalDifference" Foreground="White" Content="0" />
+            </StackPanel>
+    </StackPanel>
+</Window>

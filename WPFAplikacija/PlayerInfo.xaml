@@ -1,0 +1,62 @@
+﻿<Window x:Class="WPFAplikacija.PlayerInfo"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFAplikacija"
+        mc:Ignorable="d"
+        Title="PlayerInfo" Height="200" Width="200">
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Loaded">
+            <BeginStoryboard>
+                <Storyboard Storyboard.TargetProperty="Opacity" Duration="00:00:3">
+                    <DoubleAnimation From="0" To="1" />
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid Margin="0,0,-6.4,0.4" Background="#11998e">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel>
+            <!--  player name  -->
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lbName" Content="Name" Foreground="White" FontWeight="Bold" />
+                <Label x:Name="lblPlayerName" Content="" />
+            </StackPanel>
+
+            <!--  player number  -->
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lbNumber" Content="Number" Foreground="White"  FontWeight="Bold" />
+                <Label x:Name="lblPlayerNumber" Content="" />
+            </StackPanel>
+            
+            <!--  player position  -->
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lbPosition" Content="Position" Foreground="White" FontWeight="Bold" />
+                <Label x:Name="lblPlayerPosition" Content="" />
+            </StackPanel>
+            
+
+            <!--  player goals scored  -->
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lbGoals" Content="Goals" Foreground="White"  FontWeight="Bold" />
+                <Label x:Name="lblPlayerGoalsScored" Content="" Foreground="Black"/>
+            </StackPanel>
+
+            <!--  player goals scored  -->
+            <StackPanel Orientation="Horizontal">
+                <Label x:Name="lbYellow" Content="Yellow Cards" Foreground="White"  FontWeight="Bold" />
+                <Label x:Name="lblPlayerYellowCards" Content="" />
+            </StackPanel>
+        </StackPanel>
+
+       
+    </Grid>
+
+</Window>
